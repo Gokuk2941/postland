@@ -325,6 +325,55 @@ footer{padding-top:44px;padding-bottom:44px}
   .card.sun{background:#FFDD6B}
   .ink,.poster{background:#0e110f}
 }
+
+/* early access: top bar button, section, form, footer count */
+.top-r{display:flex;align-items:center;gap:10px}
+.ea-top{min-height:42px;padding:0 20px;font-size:15px;white-space:nowrap}
+.ea-card{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px);padding:clamp(24px,4vw,44px)}
+.ea-card .intro{max-width:26em}
+.ea-offer{margin-top:26px;padding:20px 24px 22px}
+.ea-offer h3{font-weight:800;font-size:24px;letter-spacing:-.025em;line-height:1.15}
+.ea-offer p{margin-top:8px;font-size:17px;line-height:1.45;max-width:30em}
+.ea-form{display:grid;gap:20px;align-content:start}
+.ea-field{display:grid;gap:8px}
+.ea-field label,.ea-legend{font-weight:600;font-size:16px;padding:0}
+.ea-field input{width:100%;height:54px;padding:0 18px;border-radius:16px;border:1px solid rgba(23,25,24,.35);background:#fff;font:inherit;font-size:17px;color:var(--text)}
+.ea-field input[aria-invalid="true"]{border:2px solid #A3200F}
+.ea-err{margin:0;font-size:14px;font-weight:700;color:#A3200F}
+.ea-fs{border:0;padding:0;margin:0;min-width:0}
+.ea-opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.ea-gifts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.ea-opt{position:relative;display:inline-flex}
+.ea-gifts .ea-opt{display:flex}
+.ea-opt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.ea-opt span{display:inline-flex;align-items:center;min-height:46px;padding:8px 18px;border-radius:999px;border:1px solid rgba(23,25,24,.35);background:#fff;font-weight:600;font-size:16px;line-height:1.25}
+.ea-gifts .ea-opt span{display:grid;align-content:center;gap:2px;width:100%;padding:12px 16px;border-radius:18px}
+.ea-gifts b{font-weight:800;font-size:20px;letter-spacing:-.02em}
+.ea-gifts small{font-size:14px;font-weight:500}
+.ea-opt input:checked + span{background:#000;color:#fff;border-color:#000}
+.ea-opt input:focus-visible + span{outline:3px solid #000;outline-offset:3px}
+.ea-fs .ea-err{margin-top:8px}
+.ea-trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.ea-go{justify-self:start;min-height:54px;padding:0 32px;font-size:18px}
+.ea-go[disabled]{opacity:.65;cursor:default}
+.ea-hint{margin:0;font-size:14px;color:var(--muted);max-width:32em}
+.ea-demo{margin:0 0 16px;display:inline-block;padding:6px 14px;border-radius:999px;background:var(--sun);color:#000;font-weight:700;font-size:14px}
+.ea-done{display:grid;justify-items:start;gap:12px;align-content:start;padding:8px 0}
+.ea-done:focus{outline:none}
+.ea-tick{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--mint);color:#000}
+.ea-done h3{font-weight:800;font-size:34px;letter-spacing:-.03em;line-height:1.1}
+.ea-done p{margin:0;font-size:19px;color:var(--muted);max-width:24em}
+.visits{display:flex;align-items:baseline;gap:8px;white-space:nowrap;margin:0}
+.visits b{font-weight:800;font-size:30px;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums;color:var(--text)}
+.visits span{font-weight:600;font-size:15px;color:var(--muted)}
+.visits .ea-chip{background:var(--sun);color:#000;font-weight:700;font-size:12px;padding:3px 10px;border-radius:999px}
+@media (max-width:980px){.ea-card{grid-template-columns:1fr}}
+@media (max-width:620px){
+  .ea-top{min-height:40px;padding:0 16px;font-size:14px}
+  .top-r .badge{display:none}
+}
+@media (max-width:460px){.ea-gifts{grid-template-columns:1fr}}
+@media (max-width:360px){.ea-top{padding:0 12px;font-size:13.5px}.brand{font-size:21px}.brand .logo{width:36px;height:36px}}
 </style>
 </head>
 <body>
@@ -338,7 +387,7 @@ footer{padding-top:44px;padding-bottom:44px}
     <a href="#how">How it works</a>
     <a href="#plans">Plans</a>
   </nav>
-  <span class="badge"><i class="pdot" aria-hidden="true"></i>Coming soon</span>
+  <div class="top-r"><a class="btn dark ea-top" href="#early">Get early access</a><span class="badge"><i class="pdot" aria-hidden="true"></i>Coming soon</span></div>
 </div>
 </header>
 
@@ -348,7 +397,8 @@ footer{padding-top:44px;padding-bottom:44px}
       <h1><span>Plan once.</span><span>Post everywhere.</span></h1>
       <p class="lead">Postland puts your YouTube, LinkedIn and Instagram posts on one calendar and posts them for you, at the time you choose.</p>
       <div class="actions">
-        <a class="btn dark" href="#features">See what it does</a>
+        <a class="btn dark" href="#early">Get early access</a>
+        <a class="btn line" href="#features">See what it does</a>
       </div>
       <ul class="works" aria-label="Platforms Postland works with today">
         <li>
@@ -529,12 +579,68 @@ footer{padding-top:44px;padding-bottom:44px}
   </section>
 
 
+
+  <section id="early" class="wrap" aria-labelledby="early-h">
+    <div class="card ea-card">
+      <div class="ea-left">
+        <h2 id="early-h">Get early access</h2>
+        <p class="intro">Postland opens soon. Leave your name and email and we will write to you the day it is ready.</p>
+        <div class="hlc hlc-sun ea-offer">
+          <h3 id="ea-offer-h">The first 100 members get a gift</h3>
+          <p id="ea-offer-p">Pick one when you join: 30% off after your free trial, or 14 extra days of free trial. Your gift applies once Postland is live.</p>
+        </div>
+      </div>
+      <div class="ea-right">
+        <p class="ea-demo" id="ea-demo" hidden>Preview only. Nothing is sent or saved yet.</p>
+        <form class="ea-form" id="ea-form" novalidate>
+          <div class="ea-field">
+            <label for="ea-name">Your name</label>
+            <input id="ea-name" name="name" type="text" autocomplete="name" maxlength="80" aria-describedby="ea-name-err" aria-invalid="false">
+            <p class="ea-err" id="ea-name-err" hidden>Enter your name.</p>
+          </div>
+          <div class="ea-field">
+            <label for="ea-email">Your email</label>
+            <input id="ea-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="120" aria-describedby="ea-email-err" aria-invalid="false">
+            <p class="ea-err" id="ea-email-err" hidden>Enter an email address like name@example.com.</p>
+          </div>
+          <fieldset class="ea-fs">
+            <legend class="ea-legend">Which platforms do you post to?</legend>
+            <div class="ea-opts">
+              <label class="ea-opt"><input type="checkbox" name="plat" value="YouTube"><span>YouTube</span></label>
+              <label class="ea-opt"><input type="checkbox" name="plat" value="LinkedIn"><span>LinkedIn</span></label>
+              <label class="ea-opt"><input type="checkbox" name="plat" value="Instagram"><span>Instagram</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="ea-fs" id="ea-gift-fs">
+            <legend class="ea-legend">Your early-member gift</legend>
+            <div class="ea-gifts">
+              <label class="ea-opt"><input type="radio" name="gift" value="trial30" aria-describedby="ea-gift-err"><span><b>30% off</b><small>after your free trial</small></span></label>
+              <label class="ea-opt"><input type="radio" name="gift" value="extra14" aria-describedby="ea-gift-err"><span><b>14 extra days</b><small>of free trial</small></span></label>
+            </div>
+            <p class="ea-err" id="ea-gift-err" hidden>Choose one gift.</p>
+          </fieldset>
+          <div class="ea-trap" aria-hidden="true"><label>Leave this empty<input id="ea-web" type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn dark ea-go" id="ea-go" type="submit">Join the early list</button>
+          <p class="ea-err" id="ea-fail" role="alert" hidden>We could not save your details. Check your connection and press the button again.</p>
+          <p class="ea-hint">Your details are used only to contact you about Postland and your early-member gift.</p>
+          <noscript><p class="ea-hint">Turn on JavaScript in your browser to join the list.</p></noscript>
+        </form>
+        <div class="ea-done" id="ea-done" tabindex="-1" role="status" hidden>
+          <div class="ea-tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h3>You are on the list</h3>
+          <p id="ea-done-p"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="wrap">
   <div class="foot">
     <a class="brand" href="#top" aria-label="Postland home"><svg class="logo" width="34" height="34" aria-hidden="true" focusable="false"><use href="#pl-logo"/></svg>Postland</a>
     <p>&copy; 2026 Postland, postland.in. YouTube, LinkedIn and Instagram are trademarks of their owners. Postland is not part of, or approved by, those companies.</p>
+    <p class="visits" id="visits" hidden><b id="visits-n">0</b><span>visitors</span><span class="ea-chip" id="visits-demo" hidden>Sample number</span></p>
   </div>
 </footer>
 
@@ -550,6 +656,122 @@ footer{padding-top:44px;padding-bottom:44px}
     });
   }, { threshold: 0, rootMargin: '0px 0px -15% 0px' });
   for (var i = 0; i < els.length; i++) { io.observe(els[i]); }
+})();
+</script>
+
+<script>
+/* early access form and visitor count */
+(function () {
+  var EA_URL = 'https://script.google.com/macros/s/AKfycbwpTiz72ab_fYtJoVU9HHJuT7GQsmWxNcmvta2d3ss2_GmloLZk3WHwkwwknVAe0rxrbw/exec';     /* the Google web app address goes between the quotes */
+  var SHOW_VISITS_FROM = 0;  /* show the visitor number only once it reaches this */
+  var FIRST_N = 100;
+  var demo = !EA_URL;
+  var full = false;
+  var GIFT_TEXT = { trial30: '30% off after your free trial', extra14: '14 extra days of free trial' };
+  function $(id) { return document.getElementById(id); }
+  var form = $('ea-form');
+  if (!form) { return; }
+  function fmt(n) { try { return Number(n).toLocaleString('en-IN'); } catch (e) { return String(n); } }
+
+  function showVisits(n, isDemo) {
+    if (typeof n !== 'number' || n < SHOW_VISITS_FROM) { return; }
+    $('visits-n').textContent = fmt(n);
+    $('visits').hidden = false;
+    if (isDemo) { $('visits-demo').hidden = false; }
+  }
+  /* no count is shown; once the first 100 are taken the gift is taken off the page */
+  function setFull() {
+    full = true;
+    $('ea-offer-h').textContent = 'The first 100 spots are taken';
+    $('ea-offer-p').textContent = 'You can still join the list. We will write to you the day Postland opens.';
+    $('ea-gift-fs').hidden = true;
+  }
+  function api(qs) {
+    return fetch(EA_URL + (EA_URL.indexOf('?') < 0 ? '?' : '&') + qs).then(function (r) { return r.json(); });
+  }
+
+  /* visitor number: one count for each browser; opening the page with #owner on the end keeps your own visits out */
+  if (demo) {
+    $('ea-demo').hidden = false;
+    showVisits(1284, true);
+  } else {
+    var seen = false;
+    try {
+      if (location.hash === '#owner') { localStorage.setItem('pl_seen', '1'); }
+      seen = localStorage.getItem('pl_seen') === '1';
+    } catch (e) {}
+    api('v=' + (seen ? '0' : '1')).then(function (d) {
+      if (typeof d.visits === 'number') {
+        showVisits(d.visits);
+        if (!seen) { try { localStorage.setItem('pl_seen', '1'); } catch (e) {} }
+      }
+      if (d.open === false) { setFull(); }
+    }).catch(function () {});
+  }
+
+  function bad(inputId, errId, isBad) {
+    $(inputId).setAttribute('aria-invalid', isBad ? 'true' : 'false');
+    $(errId).hidden = !isBad;
+    return isBad;
+  }
+  function post(p, tries) {
+    return fetch(EA_URL, { method: 'POST', body: JSON.stringify(p) })
+      .then(function (r) { return r.json(); })
+      .catch(function (e) {
+        if (tries < 1) {
+          return new Promise(function (ok) { setTimeout(ok, 1200); }).then(function () { return post(p, tries + 1); });
+        }
+        throw e;
+      });
+  }
+  function fail() {
+    var b = $('ea-go');
+    b.disabled = false;
+    b.textContent = 'Join the early list';
+    $('ea-fail').hidden = false;
+  }
+  function done(res, email) {
+    var t = 'We will write to ' + email + ' when Postland opens.';
+    if (res && res.first && res.member && GIFT_TEXT[res.gift]) {
+      t = 'You are early member number ' + res.member + '. Your gift: ' + GIFT_TEXT[res.gift] + '. ' + t;
+    }
+    $('ea-done-p').textContent = t;
+    form.hidden = true;
+    $('ea-demo').hidden = true;
+    var d = $('ea-done');
+    d.hidden = false;
+    d.focus();
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var name = $('ea-name').value.trim();
+    var email = $('ea-email').value.trim();
+    var g = form.querySelector('input[name="gift"]:checked');
+    var gift = g ? g.value : '';
+    var plats = [];
+    Array.prototype.forEach.call(form.querySelectorAll('input[name="plat"]:checked'), function (c) { plats.push(c.value); });
+    var badName = bad('ea-name', 'ea-name-err', name.length < 2);
+    var badEmail = bad('ea-email', 'ea-email-err', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
+    var badGift = !full && !gift;
+    $('ea-gift-err').hidden = !badGift;
+    if (badName) { $('ea-name').focus(); return; }
+    if (badEmail) { $('ea-email').focus(); return; }
+    if (badGift) { form.querySelector('input[name="gift"]').focus(); return; }
+    var btn = $('ea-go');
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+    $('ea-fail').hidden = true;
+    var payload = { name: name, email: email, plats: plats, gift: full ? '' : gift, website: $('ea-web').value };
+    if (payload.website) { done({ ok: true }, email); return; } /* spam trap: looks the same, sends nothing */
+    if (demo) {
+      setTimeout(function () { done({ ok: true, first: true, member: 14, gift: payload.gift }, email); }, 900);
+      return;
+    }
+    post(payload, 0).then(function (res) {
+      if (res && res.ok) { done(res, email); } else { fail(); }
+    }).catch(fail);
+  });
 })();
 </script>
 </body>
