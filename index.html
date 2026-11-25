@@ -326,6 +326,88 @@ footer{padding-top:44px;padding-bottom:44px}
   .ink,.poster{background:#0e110f}
 }
 
+/* slideshow: See inside Postland */
+.ss-chaps{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.ss-chaps:empty{display:none}
+.ss-cb{font:inherit;font-weight:700;font-size:16px;line-height:1.2;min-height:44px;padding:8px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--text);cursor:pointer}
+.ss-cb[aria-current="true"]{background:#000;color:#fff;border-color:#000}
+.card.ss-stage{margin-top:16px;padding:36px 40px;border-radius:32px}
+.ss-cols{display:flex;flex-wrap:wrap;gap:36px;align-items:center;min-height:330px}
+.ss-txt{flex:1 1 320px;min-width:0}
+.ss-stage .ss-title{font-weight:800;font-size:clamp(28px,3.8vw,46px);line-height:1.05;letter-spacing:-.03em}
+.ss-stage .ss-lead{margin-top:14px;max-width:34em;font-size:19px;line-height:1.5;color:var(--muted)}
+.ss-plan{margin-top:18px}
+.ss-plan:empty{display:none}
+.card.ss-hl-sun{background:linear-gradient(135deg,#FFD23F,#FFE27A);color:#000;border-color:rgba(255,255,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 22px 40px -24px rgba(140,90,0,.6)}
+.ss-hl-sun .ss-lead{color:#2c3330}
+.card.ss-hl-ink{background:linear-gradient(135deg,#0c0f0e,#1f2926);color:#fff;border-color:rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 22px 40px -22px rgba(0,0,0,.65)}
+.ss-hl-ink .ss-lead{color:var(--soft-text)}
+.ss-scr{flex:1 1 380px;min-width:0;background:#fff;color:var(--text);border-radius:22px;border:1px solid rgba(23,25,24,.08);overflow:hidden;box-shadow:0 18px 40px -22px rgba(23,25,24,.4)}
+.ss-bar{display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid rgba(23,25,24,.08);font-weight:600;font-size:15px;color:var(--muted)}
+.ss-bar i{display:block;width:10px;height:10px;border-radius:50%;background:#000}
+.ss-body{padding:10px 20px 20px;min-height:236px}
+.ss-row{display:grid;grid-template-columns:124px 1fr auto;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(23,25,24,.07)}
+.ss-row:last-child{border-bottom:0}
+.ss-chip{display:inline-block;padding:3px 12px;border-radius:999px;font-weight:700;font-size:14px;line-height:1.5;text-align:center;white-space:nowrap;background:#E9EEEB;color:#171918}
+.ss-t-peach{background:#FFC7A8}.ss-t-mint{background:#7FE3C4}.ss-t-sun{background:#FFD23F}.ss-t-ink{background:#000;color:#fff}
+.ss-row .ss-t{font-weight:500;font-size:16px}
+.ss-row .ss-s{font-size:14px;color:var(--muted);text-align:right}
+.ss-tabs{display:flex;gap:6px;margin:6px 0 14px}
+.ss-tab{padding:6px 16px;border-radius:999px;background:#E9EEEB;font-weight:700;font-size:14px}
+.ss-tab.on{background:#000;color:#fff}
+.ss-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.ss-day{display:flex;flex-direction:column;gap:5px;min-height:128px;padding:8px 5px;border-radius:14px;background:#F3F6F4}
+.ss-day b{font-size:12px;font-weight:600;color:var(--muted);text-align:center}
+.ss-pill{padding:3px 0;border-radius:8px;text-align:center;font-size:12px;font-weight:700}
+.ss-day.drop{background:rgba(127,227,196,.35);outline:2px dashed #171918;outline-offset:-2px}
+.ss-pill.lift{box-shadow:0 10px 18px -6px rgba(0,0,0,.45);transform:rotate(-4deg) translateY(-4px)}
+.ss-pill.ghost{background:transparent;border:2px dashed #8a918d;color:var(--muted)}
+.ss-key{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;font-size:13px;color:var(--muted)}
+.ss-key span{display:flex;align-items:center;gap:6px}
+.ss-key i{display:block;width:10px;height:10px;border-radius:50%}
+.ss-bars{display:flex;align-items:flex-end;gap:10px;height:170px;margin-top:8px}
+.ss-barc{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;height:100%}
+.ss-barc .col{width:100%;border-radius:10px 10px 4px 4px;background:#7FE3C4}
+.ss-barc.best .col{background:#FFD23F}
+.ss-barc b{font-size:12px;font-weight:600;color:var(--muted)}
+.ss-barc.best b{color:#000}
+.ss-note{margin-top:12px;font-size:14px;color:var(--muted)}
+.ss-story{display:flex;gap:4px;margin-top:20px}
+.ss-seg{flex:1;height:44px;padding:20px 0;border:0;background:transparent;cursor:pointer}
+.ss-seg .tr{display:block;height:4px;border-radius:2px;background:rgba(23,25,24,.2);overflow:hidden}
+.ss-seg .f{display:block;height:100%;width:0;background:#000}
+.ss-seg.done .f{width:100%}
+.ss-seg.nowA .f{animation:ssfillA 4.5s linear forwards}
+.ss-seg.nowB .f{animation:ssfillB 4.5s linear forwards}
+#inside.ss-hold .ss-seg .f{animation-play-state:paused}
+@keyframes ssfillA{from{width:0}to{width:100%}}
+@keyframes ssfillB{from{width:0}to{width:100%}}
+.ss-cols.ssA{animation:ssinA .45s ease both}
+.ss-cols.ssB{animation:ssinB .45s ease both}
+@keyframes ssinA{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes ssinB{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.ss-ctl{display:flex;align-items:center;gap:12px}
+.ss-ctl:empty{display:none}
+.ss-rb{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border-radius:50%;border:1px solid rgba(23,25,24,.2);background:#fff;color:#000;cursor:pointer}
+.ss-rb.dark{background:#000;color:#fff;border-color:#000}
+.ss-count{margin-left:6px;font-weight:700;font-size:16px}
+@media (max-width:420px){
+  .ss-week{grid-template-columns:1fr}
+  .ss-day{flex-direction:row;flex-wrap:wrap;align-items:center;min-height:0;padding:6px 10px}
+  .ss-day b{width:34px;text-align:left}
+  .ss-pill{padding:3px 10px;font-size:13px}
+}
+@media (max-width:600px){
+  .card.ss-stage{padding:24px 20px}
+  .ss-row{grid-template-columns:1fr auto}
+  .ss-row .ss-chip{grid-column:1 / -1;justify-self:start}
+  .ss-seg{pointer-events:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .ss-cols.ssA,.ss-cols.ssB{animation:none}
+  .ss-seg.nowA .f,.ss-seg.nowB .f{animation:none;width:100%}
+}
+
 /* early access: top bar button, section, form, footer count */
 .top-r{display:flex;align-items:center;gap:10px}
 .ea-top{min-height:42px;padding:0 20px;font-size:15px;white-space:nowrap}
@@ -490,6 +572,30 @@ footer{padding-top:44px;padding-bottom:44px}
     </div>
   </section>
 
+  <section id="inside" class="wrap" aria-labelledby="inside-h">
+    <h2 id="inside-h">See inside Postland</h2>
+    <p class="intro">Every feature on the user page, one screen at a time. These are sample screens.</p>
+
+    <div class="ss-chaps" role="group" aria-label="Feature groups"></div>
+
+    <div class="card ss-stage" role="group" aria-roledescription="slideshow" aria-label="Postland features">
+      <div class="ss-cols">
+        <div class="ss-txt">
+          <h3 class="ss-title">Connect your channels</h3>
+          <p class="ss-lead">Connect YouTube, LinkedIn and Instagram once. Postland tells you when one needs attention.</p>
+          <div class="ss-plan"></div>
+        </div>
+        <div class="ss-scr" aria-hidden="true">
+          <div class="ss-bar"><i></i><span class="ss-crumb">Connections</span></div>
+          <div class="ss-body"><div class="ss-row"><span class="ss-chip ss-t-peach">YouTube</span><span class="ss-t">Connected</span><span class="ss-s">Ready</span></div><div class="ss-row"><span class="ss-chip ss-t-mint">LinkedIn</span><span class="ss-t">Connected</span><span class="ss-s">Ready</span></div><div class="ss-row"><span class="ss-chip ss-t-sun">Instagram</span><span class="ss-t">Sign in again</span><span class="ss-s">Needs you</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ss-story" aria-label="Slideshow progress"></div>
+    <div class="ss-ctl"></div>
+  </section>
+
   <section id="how" class="wrap">
     <h2>How it works</h2>
     <div class="how">
@@ -627,7 +733,7 @@ footer{padding-top:44px;padding-bottom:44px}
         </form>
         <div class="ea-done" id="ea-done" tabindex="-1" role="status" hidden>
           <div class="ea-tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-          <h3>You are on the list</h3>
+          <h3>Congratulations</h3>
           <p id="ea-done-p"></p>
         </div>
       </div>
@@ -658,6 +764,104 @@ footer{padding-top:44px;padding-bottom:44px}
   for (var i = 0; i < els.length; i++) { io.observe(els[i]); }
 })();
 </script>
+<script>
+(function () {
+  var root = document.getElementById('inside');
+  if (!root) { return; }
+  var CH = ["Start", "Plan", "Videos", "Posting", "Audience", "Team", "Safety"];
+  var S = [{"c": 0, "title": "Connect your channels", "text": "Connect YouTube, LinkedIn and Instagram once. Postland tells you when one needs attention.", "plan": "", "crumb": "Connections", "kind": "rows", "rows": [["YouTube", "Connected", "Ready", "peach"], ["LinkedIn", "Connected", "Ready", "mint"], ["Instagram", "Sign in again", "Needs you", "sun"]]}, {"c": 0, "title": "Your day on one screen", "text": "See what goes out next, what is coming up this week and what needs you.", "plan": "", "crumb": "Dashboard", "kind": "rows", "rows": [["Up next", "LinkedIn post", "in 2 h 10 min", "ink"], ["Coming up", "3 posts this week", "Scheduled", "none"], ["Needs you", "Reconnect Instagram", "1 task", "none"]]}, {"c": 1, "title": "One calendar for all three platforms", "text": "Every YouTube, LinkedIn and Instagram post sits on the same calendar, each in its own colour.", "plan": "", "crumb": "Plan · Calendar", "kind": "rows", "rows": [["YouTube", "Linux permissions explained", "Mon 6:00 PM", "peach"], ["LinkedIn", "Linux permissions: 5 key points", "Mon 7:00 PM", "mint"], ["Instagram", "Reel: chmod in 40 seconds", "Tue 6:00 PM", "sun"]]}, {"c": 1, "title": "Month and week views", "text": "Switch between the whole month and a week with time slots.", "plan": "", "crumb": "Plan · Calendar", "kind": "week", "tabs": ["Month", "Week"], "tabOn": 1, "days": [["Mon", [["peach", "6 PM"], ["mint", "7 PM"]]], ["Tue", [["sun", "6 PM"]]], ["Wed", []], ["Thu", [["peach", "6 PM"]]], ["Fri", [["mint", "7 PM"]]], ["Sat", [["sun", "10 AM"]]], ["Sun", []]]}, {"c": 1, "title": "Plan one post for all platforms", "text": "Add your video and words once, switch each platform on or off, and pick the time.", "plan": "", "crumb": "Plan · New post", "kind": "rows", "rows": [["Video", "Linux permissions explained", "Added", "none"], ["Where", "YouTube, LinkedIn, Instagram", "All on", "none"], ["When", "Mon 6:00 PM", "Set", "none"]]}, {"c": 1, "title": "Drag a post to another day", "text": "Plans change. Drag a post to another day and it moves there.", "plan": "", "crumb": "Plan · Calendar", "kind": "week", "tabs": ["Month", "Week"], "tabOn": 1, "days": [["Mon", [["peach", "6 PM", "ghost"]]], ["Tue", [["sun", "6 PM"]]], ["Wed", [["peach", "6 PM", "lift"]], "drop"], ["Thu", []], ["Fri", [["mint", "7 PM"]]], ["Sat", []], ["Sun", []]]}, {"c": 2, "title": "Upload videos, thumbnails and captions", "text": "Add the video file, its thumbnail and its caption file in one place.", "plan": "", "crumb": "Plan · New post · Files", "kind": "rows", "rows": [["Video", "linux-permissions.mp4", "Added", "none"], ["Thumbnail", "1280 × 720 picture", "Checked", "none"], ["Captions", "linux-permissions.srt", "Added", "none"]]}, {"c": 2, "title": "A library for all your videos", "text": "Keep every video in one library. Tick the ones you want to edit or post.", "plan": "", "crumb": "Library", "kind": "rows", "rows": [["Ready", "Linux permissions explained", "Edit · Post", "none"], ["In use", "What is HA in VMware", "Planned", "none"], ["Kept", "AWS VPC explained", "Pinned", "none"]]}, {"c": 2, "title": "Video editing", "text": "Trim, cut, add text on screen and tidy the sound, right in your browser.", "plan": "Pro and Advance Pro", "hl": "sun", "crumb": "Library · Edit", "kind": "rows", "rows": [["Trim", "Set the start and the end", "", "none"], ["Cut", "Remove a part in the middle", "", "none"], ["Text", "Put words on the screen", "", "none"], ["Sound", "Even out the loudness", "", "none"]]}, {"c": 2, "title": "Claude suggestions", "text": "Upload one long video. Claude suggests titles, descriptions, captions and cover words, and picks a 40 to 50 second part for a Short.", "plan": "Advance Pro", "hl": "ink", "crumb": "Library · Suggestions", "kind": "rows", "rows": [["YouTube", "Title and description", "3 ideas", "peach"], ["Short", "A 40 to 50 second part", "Picked", "peach"], ["Instagram", "Caption and cover words", "3 ideas", "sun"], ["LinkedIn", "Post in your format", "3 ideas", "mint"]]}, {"c": 2, "title": "Checks for titles, captions and hashtags", "text": "Postland checks length, hashtags and links before the post is saved.", "plan": "", "crumb": "Plan · New post · Checks", "kind": "rows", "rows": [["Title", "61 of 100 characters", "OK", "none"], ["Instagram", "5 hashtags, the most allowed", "OK", "sun"], ["Thumbnail", "Not added yet", "Fix it", "ink"]]}, {"c": 2, "title": "Suggests the next video to post", "text": "Postland points to the next video in your library that is ready to plan.", "plan": "", "crumb": "Plan · Suggestions", "kind": "rows", "rows": [["Next", "AWS VPC explained", "Plan it", "ink"], ["Then", "Route 53 explained", "Plan it", "none"]]}, {"c": 3, "title": "Rehearsal mode", "text": "A practice run. Postland goes through the whole post and sends nothing to YouTube, LinkedIn or Instagram.", "plan": "", "crumb": "Plan · Rehearsal", "kind": "rows", "rows": [["Title", "Checked", "OK", "none"], ["Thumbnail", "Checked", "OK", "none"], ["Captions", "Checked", "OK", "none"], ["Sent", "Nothing was sent", "Rehearsal", "ink"]]}, {"c": 3, "title": "On air mode", "text": "The real thing. Postland sends each post to its platform at the time you chose, once.", "plan": "", "crumb": "Plan · On air", "kind": "rows", "rows": [["YouTube", "AWS VPC explained", "On air", "peach"], ["LinkedIn", "AWS VPC: 5 key points", "On air", "mint"], ["Instagram", "Reel: what is a subnet", "On air", "sun"]]}, {"c": 3, "title": "Each post goes out once, on time", "text": "A post is sent one time, at its time. Postland never sends the same post twice.", "plan": "", "crumb": "Plan · All posts", "kind": "rows", "rows": [["YouTube", "AWS VPC explained", "Sent", "peach"], ["LinkedIn", "AWS VPC: 5 key points", "Sent", "mint"], ["Instagram", "Reel: what is a subnet", "Waiting", "sun"]]}, {"c": 3, "title": "A late post waits for you", "text": "If a post cannot go out on time, Postland holds it and tells you. You decide what happens next.", "plan": "", "crumb": "Plan · Needs you", "kind": "rows", "rows": [["LinkedIn", "AWS VPC: 5 key points", "Missed its time", "mint"], ["Your choice", "Post now, move it or skip it", "", "ink"]]}, {"c": 4, "title": "Numbers and best times to post", "text": "See views and subscribers, and the days and times your audience watches most.", "plan": "", "crumb": "Performance", "kind": "bars", "bars": [["Mon", 44], ["Tue", 58], ["Wed", 36], ["Thu", 104], ["Fri", 70], ["Sat", 32], ["Sun", 48]], "best": 3, "note": "Sample numbers. Best day to post: Thursday."}, {"c": 4, "title": "Comment inbox sorted into piles", "text": "Comments from YouTube and Instagram land in one inbox and are sorted into piles, so you answer the ones that need you first.", "plan": "", "crumb": "Inbox", "kind": "rows", "rows": [["Needs a reply", "“Can you cover Route 53 next?”", "YouTube", "ink"], ["Unread", "“Clear and simple, thank you”", "Instagram", "none"], ["Needs a reply", "“Which mask should I use?”", "YouTube", "ink"]]}, {"c": 4, "title": "Bell alerts and email alerts", "text": "A bell shows what needs you. The important ones also reach you by email.", "plan": "", "crumb": "Bell", "kind": "rows", "rows": [["Needs you", "Instagram sign-in ends in 2 days", "Open", "ink"], ["Posted", "LinkedIn post is live", "Mon 7:00 PM", "none"], ["Reminder", "Add captions to the next video", "Today", "none"]]}, {"c": 5, "title": "Team members with their own roles", "text": "Add people to your team. Each gets a role that sets what they can see and change.", "plan": "", "crumb": "Team · Members", "kind": "rows", "rows": [["Editor", "Dinesh", "Active", "none"], ["Publisher", "Meena", "Active", "none"], ["Viewer", "Arun", "Not signed in yet", "none"]]}, {"c": 5, "title": "Team sign-in with a user ID and PIN", "text": "Each member signs in with their own user ID and a 6-digit PIN, and sees only what their role allows.", "plan": "", "crumb": "Sign in · Team member", "kind": "rows", "rows": [["User ID", "acme.dinesh", "", "none"], ["PIN", "● ● ● ● ● ●", "", "none"], ["Role", "Editor: Plan and Library", "", "none"]]}, {"c": 5, "title": "Owner approves team posts", "text": "Posts planned by a member wait for the owner. Nothing goes out until the owner approves.", "plan": "", "crumb": "Plan · Waiting for approval", "kind": "rows", "rows": [["Dinesh", "AWS VPC: 5 key points", "Approve", "ink"], ["Dinesh", "Reel: what is a subnet", "Approve", "ink"]]}, {"c": 6, "title": "2-step sign-in code", "text": "Add a 6-digit code from your phone, so a password alone cannot open your account.", "plan": "", "crumb": "Your account · 2-step", "kind": "rows", "rows": [["Password", "Entered", "OK", "none"], ["Code", "6 digits from your phone", "Needed", "ink"]]}, {"c": 6, "title": "Activity log of every action", "text": "Every sign-in, plan and post is written to a log you can search.", "plan": "", "crumb": "Activity log", "kind": "rows", "rows": [["10:02", "Dinesh planned a post", "Plan", "none"], ["09:40", "You switched On air", "Mode", "none"], ["09:15", "You signed in", "Account", "none"]]}, {"c": 6, "title": "Help guides inside the app", "text": "Ask in the Help chat and get a plain answer from the built-in guides.", "plan": "", "crumb": "Help", "kind": "rows", "rows": [["You ask", "How do I connect YouTube?", "Guide", "none"], ["You ask", "Why is my post waiting?", "Guide", "none"]]}];
+  var DUR = 4500;
+  var q = function (sel) { return root.querySelector(sel); };
+  var stage = q('.ss-stage'), cols = q('.ss-cols'), title = q('.ss-title'), lead = q('.ss-lead'), plan = q('.ss-plan'),
+      crumb = q('.ss-crumb'), body = q('.ss-body'), chaps = q('.ss-chaps'), story = q('.ss-story'), ctl = q('.ss-ctl');
+  var i = 0, k = 0, paused = false, visible = false, timer = null;
+  try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { paused = true; } } catch (err) {}
+
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function rowsHtml(rows) {
+    return rows.map(function (r) {
+      return '<div class="ss-row"><span class="ss-chip ss-t-' + esc(r[3] || 'none') + '">' + esc(r[0]) + '</span><span class="ss-t">' + esc(r[1]) + '</span><span class="ss-s">' + esc(r[2] || '') + '</span></div>';
+    }).join('');
+  }
+  function weekHtml(s) {
+    var tabs = s.tabs.map(function (t, n) { return '<span class="ss-tab' + (n === s.tabOn ? ' on' : '') + '">' + esc(t) + '</span>'; }).join('');
+    var days = s.days.map(function (d) {
+      var chips = d[1].map(function (p) { return '<div class="ss-pill ss-t-' + esc(p[0]) + (p[2] ? ' ' + esc(p[2]) : '') + '">' + esc(p[1]) + '</div>'; }).join('');
+      return '<div class="ss-day' + (d[2] ? ' ' + esc(d[2]) : '') + '"><b>' + esc(d[0]) + '</b>' + chips + '</div>';
+    }).join('');
+    return '<div class="ss-tabs">' + tabs + '</div><div class="ss-week">' + days + '</div>' +
+      '<div class="ss-key"><span><i class="ss-t-peach"></i>YouTube</span><span><i class="ss-t-mint"></i>LinkedIn</span><span><i class="ss-t-sun"></i>Instagram</span></div>';
+  }
+  function barsHtml(s) {
+    var bars = s.bars.map(function (b, n) { return '<div class="ss-barc' + (n === s.best ? ' best' : '') + '"><div class="col" style="height:' + Number(b[1]) + 'px"></div><b>' + esc(b[0]) + '</b></div>'; }).join('');
+    return '<div class="ss-bars">' + bars + '</div><p class="ss-note">' + esc(s.note) + '</p>';
+  }
+  function icon(d, fill) {
+    return '<svg width="20" height="20" viewBox="0 0 24 24" fill="' + (fill ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>';
+  }
+
+  /* build the controls once */
+  var chapBtns = CH.map(function (name, c) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'ss-cb'; b.textContent = name;
+    b.addEventListener('click', function () { for (var n = 0; n < S.length; n++) { if (S[n].c === c) { jump(n); return; } } });
+    chaps.appendChild(b); return b;
+  });
+  var segs = S.map(function (s, n) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'ss-seg'; b.setAttribute('aria-label', 'Show ' + s.title);
+    b.innerHTML = '<span class="tr"><span class="f"></span></span>';
+    b.addEventListener('click', function () { jump(n); });
+    story.appendChild(b); return b;
+  });
+  function mkBtn(label, cls, html, fn) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'ss-rb' + (cls ? ' ' + cls : ''); b.setAttribute('aria-label', label); b.innerHTML = html;
+    b.addEventListener('click', fn); ctl.appendChild(b); return b;
+  }
+  mkBtn('Previous feature', '', icon('M15 5l-7 7 7 7'), function () { go(-1); });
+  var tgl = mkBtn('Pause the slideshow', 'dark', '', function () { paused = !paused; k++; render(); arm(); });
+  mkBtn('Next feature', '', icon('M9 5l7 7-7 7'), function () { go(1); });
+  var count = document.createElement('span'); count.className = 'ss-count'; ctl.appendChild(count);
+
+  function render(changed) {
+    var s = S[i];
+    title.textContent = s.title;
+    lead.textContent = s.text;
+    crumb.textContent = s.crumb;
+    body.innerHTML = s.kind === 'week' ? weekHtml(s) : (s.kind === 'bars' ? barsHtml(s) : rowsHtml(s.rows));
+    plan.innerHTML = '';
+    if (s.plan) {
+      var p = document.createElement('span');
+      p.className = 'pill ' + (s.hl === 'sun' ? 'pill-black' : 'pill-sun');
+      p.textContent = s.plan; plan.appendChild(p);
+    }
+    stage.className = 'card ss-stage' + (s.hl ? ' ss-hl-' + s.hl : '');
+    if (changed) { cols.className = 'ss-cols ' + (i % 2 ? 'ssA' : 'ssB'); }
+    chapBtns.forEach(function (b, c) { if (c === s.c) { b.setAttribute('aria-current', 'true'); } else { b.removeAttribute('aria-current'); } });
+    segs.forEach(function (b, n) { b.className = 'ss-seg' + (n < i ? ' done' : '') + (n === i ? (k % 2 ? ' nowA' : ' nowB') : ''); });
+    count.textContent = (i + 1) + ' of ' + S.length;
+    tgl.innerHTML = paused ? icon('M8 5l11 7-11 7z', true) : icon('M8 5v14M16 5v14');
+    tgl.setAttribute('aria-label', paused ? 'Play the slideshow' : 'Pause the slideshow');
+    root.classList.toggle('ss-hold', paused || !visible);
+  }
+  function arm() {
+    clearTimeout(timer);
+    if (!paused && visible) { timer = setTimeout(function () { go(1); }, DUR); }
+  }
+  function go(d) { i = (i + d + S.length) % S.length; k++; render(true); arm(); }
+  function jump(n) { i = n; k++; render(true); arm(); }
+
+  render(false);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      var v = entries[0].isIntersecting;
+      if (v === visible) { return; }
+      visible = v; k++; render(false); arm();
+    }, { threshold: 0.3 }).observe(stage);
+  } else { visible = true; render(false); arm(); }
+})();
+</script>
 
 <script>
 /* early access form and visitor count */
@@ -667,7 +871,6 @@ footer{padding-top:44px;padding-bottom:44px}
   var FIRST_N = 100;
   var demo = !EA_URL;
   var full = false;
-  var GIFT_TEXT = { trial30: '30% off after your free trial', extra14: '14 extra days of free trial' };
   function $(id) { return document.getElementById(id); }
   var form = $('ea-form');
   if (!form) { return; }
@@ -731,9 +934,12 @@ footer{padding-top:44px;padding-bottom:44px}
     $('ea-fail').hidden = false;
   }
   function done(res, email) {
-    var t = 'We will write to ' + email + ' when Postland opens.';
-    if (res && res.first && res.member && GIFT_TEXT[res.gift]) {
-      t = 'You are early member number ' + res.member + '. Your gift: ' + GIFT_TEXT[res.gift] + '. ' + t;
+    /* no member number or count is shown */
+    var t = 'Your early interest is submitted. We will write to ' + email + ' when Postland opens.';
+    if (res && res.first && res.gift === 'trial30') {
+      t = 'Your early interest is submitted. Once Postland is live, we will send your 30% off offer code to ' + email + '.';
+    } else if (res && res.first && res.gift === 'extra14') {
+      t = 'Your early interest is submitted. Once Postland is live, you will get 14 extra days of free trial by default. We will write to ' + email + '.';
     }
     $('ea-done-p').textContent = t;
     form.hidden = true;
